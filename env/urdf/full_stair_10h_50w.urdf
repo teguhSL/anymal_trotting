@@ -1,0 +1,205 @@
+<?xml version="1.0" ?>
+<robot name="stair"  xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <link name="world">
+    </link>
+    
+    <link name="stair1">
+    <contact>
+      <lateral_friction value="1."/>
+      <rolling_friction value="0.0"/>
+      <spinning_friction value="0.004"/>
+    </contact>
+      <inertial>
+        <origin
+            xyz="0 0 0."
+            rpy="0 0 0" />
+        <mass
+            value="0.1" />
+        <inertia
+            ixx="1"
+            ixy="0"
+            ixz="0"
+            iyy="1"
+            iyz="0"
+            izz="1" />            
+      </inertial>
+    <visual>
+        <origin rpy="0 0 0" xyz="0.55 0.22 0.05"/>
+        <geometry>
+             <box size="0.5  0.96 0.1"/>
+        </geometry>
+        <material name="panda white"/>
+    </visual>
+
+    <collision>
+        <origin rpy="0 0 0" xyz="0.55 0.22 0.05"/>
+        <geometry>
+             <box size="0.5  0.96 0.1"/>
+        </geometry>
+        <material name="panda white"/>
+    </collision>
+    </link>
+
+
+    <link name="stair2">
+    <contact>
+      <lateral_friction value="1."/>
+      <rolling_friction value="0.0"/>
+      <spinning_friction value="0.004"/>
+    </contact>
+      <inertial>
+        <origin
+            xyz="0 0 0."
+            rpy="0 0 0" />
+        <mass
+            value="0.1" />
+        <inertia
+            ixx="1"
+            ixy="0"
+            ixz="0"
+            iyy="1"
+            iyz="0"
+            izz="1" />            
+      </inertial>
+    <visual>
+        <origin rpy="0 0 0" xyz="1.05 0.22 0.15"/>
+        <geometry>
+             <box size="0.5  0.96 0.1"/>
+        </geometry>
+        <material name="panda white"/>
+    </visual>
+
+    <collision>
+        <origin rpy="0 0 0" xyz="1.05 0.22 0.15"/>
+        <geometry>
+             <box size="0.5  0.96 0.1"/>
+        </geometry>
+        <material name="panda white"/>
+    </collision>
+    </link>
+
+    <link name="stair3">
+    <contact>
+      <lateral_friction value="1."/>
+      <rolling_friction value="0.0"/>
+      <spinning_friction value="0.004"/>
+    </contact>
+      <inertial>
+        <origin
+            xyz="0 0 0."
+            rpy="0 0 0" />
+        <mass
+            value="0.1" />
+        <inertia
+            ixx="1"
+            ixy="0"
+            ixz="0"
+            iyy="1"
+            iyz="0"
+            izz="1" />            
+      </inertial>
+    <visual>
+        <origin rpy="0 0 0" xyz="1.55 0.22 0.25"/>
+        <geometry>
+             <box size="0.5  0.96 0.1"/>
+        </geometry>
+        <material name="panda white"/>
+    </visual>
+
+    <collision>
+        <origin rpy="0 0 0" xyz="1.55 0.22 0.25"/>
+        <geometry>
+             <box size="0.5  0.96 0.1"/>
+        </geometry>
+        <material name="panda white"/>
+    </collision>
+    </link>
+
+    <link name="stair4">
+    <contact>
+      <lateral_friction value="1."/>
+      <rolling_friction value="0.0"/>
+      <spinning_friction value="0.004"/>
+    </contact>
+      <inertial>
+        <origin
+            xyz="0 0 0."
+            rpy="0 0 0" />
+        <mass
+            value="0.1" />
+        <inertia
+            ixx="1"
+            ixy="0"
+            ixz="0"
+            iyy="1"
+            iyz="0"
+            izz="1" />            
+      </inertial>
+    <visual>
+        <origin rpy="0 0 0" xyz="2.4  0.22 0.35"/>
+        <geometry>
+             <box size="1.2  0.96 0.1"/>
+        </geometry>
+        <material name="panda white"/>
+    </visual>
+
+    <collision>
+        <origin rpy="0 0 0" xyz="2.4  0.22 0.35"/>
+        <geometry>
+             <box size="1.2  0.96 0.1"/>
+        </geometry>
+        <material name="panda white"/>
+    </collision>
+    </link>
+
+    <joint
+        name="joint_stair1"
+        type="fixed">
+      <origin
+          xyz="0.0 0.0 0." />
+      <parent
+          link="world" />
+      <child
+          link="stair1" />
+    </joint>
+
+    <joint
+        name="joint_stair2"
+        type="fixed">
+      <origin
+          xyz="0.0 0.0 0." />
+      <parent
+          link="world" />
+      <child
+          link="stair2" />
+    </joint>
+
+    <joint
+        name="joint_stair3"
+        type="fixed">
+      <origin
+          xyz="0.0 0.0 0." />
+      <parent
+          link="world" />
+      <child
+          link="stair3" />
+    </joint>
+
+
+    <joint
+        name="joint_stair4"
+        type="fixed">
+      <origin
+          xyz="0.0 0.0 0." />
+      <parent
+          link="world" />
+      <child
+          link="stair4" />
+    </joint>
+
+
+  <material name="panda_white">
+    <color rgba=".44 .3 .2 1."/>
+  </material>
+</robot>
+
